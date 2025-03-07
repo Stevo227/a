@@ -1,0 +1,41 @@
+class Grad:
+    def __init__(self, ime, broj_na_zhiteli):
+        self.ime = ime
+        self.broj_na_zhiteli = broj_na_zhiteli
+
+    def __str__(self):
+        return f'{self.ime}, Broj na zhiteli: {self.broj_na_zhiteli}'
+
+    class Pretsedatel:
+        def __init__(self, ime, prezime, politichka_partija):
+            self.ime = ime
+            self.prezime = prezime
+            self.politichka_partija = politichka_partija
+
+        def __str__(self):
+            return f'{self.ime}, Politichka partija: {self.politichka_partija}'
+
+    class Drzava:
+        def __innit__(self, ime, pretsedatel, glaven_grad, broj_na_zhiteli):
+            self.ime = ime
+            self.pretsedatel = pretsedatel
+            self.glaven_grad = glaven_grad
+            self.broj_na_zhiteli = broj_na_zhiteli
+
+        def __str__(self):
+            return f'Drzhava: {self.ime}. Glaven Grad: {self.glaven_grad}. Pretsedatel: {self.pretsedatel}.'
+
+        if __name__ == '__main__':
+            n = int(input("Vnesi n: "))
+
+            for i in range(n):
+                ime_drzhava = input("Ime na drzhava: ")
+                ime_pretsedatel = input("Ime na pretsedatel: ")
+                prezime_pretsedatel = input("Prezime na pretsedatel: ")
+                partija_pretsedatel = input("Partija na pretsedatel: ")
+                Pretsedatel = Pretsedatel(ime_pretsedatel, prezime_pretsedatel, partija_pretsedatel)
+                grad_ime = input("Ime na glaven grad")
+                grad_zhiteli = int(input("Broj na zhiteli"))
+                grad = grad(grad_ime, grad_zhiteli)
+                drzhava_zhitelli = int("Broj na zhiteli vo drzavata")
+                drzhava = drzhava(ime_drzhava, ime_pretsedatel, grad, drzhava_zhitelli)
