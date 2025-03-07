@@ -1,0 +1,35 @@
+class Ekipa:
+    def __init__(self, ime, grad, godina):
+        self.ime = ime
+        self.grad = grad
+        self.godina = godina
+        
+    def __str__(self):
+        return f'{self.ime}, {self.grad}, Godina na formiranje {self.godina}'
+    
+class Natprevar:
+    def __init__(self, domakjin, gostin, golovi_domakjin, golovi_gostin):
+        self.domakjin = domakjin
+        self.gostin = gostin
+        self.golovi_domakjin = golovi_domakjin
+        self.golovi_gostin = golovi_gostin
+        
+def revans(natprevar1, naprevar2):
+    return natprevar1.domakjin == natprevar2.gostin and natprevar1.gostin == natprevar2.domakjin
+
+def duel(natprevar1, natprevar2):
+    if duel(natprevar1, natprevar2):
+        print("Natprevarite ne si odgovaraat")
+        return -1
+    else:
+        golovi_ekipa1 = natprevar1.golovi_domakjin + natprevar2.golovi_gostin
+        golovi_ekipa2 = natprevar1.golovi_gostin + natprevar2.golovi_domakjin
+        
+        if golovi_ekipa_1 > golovi_ekipa2:
+            print("pobednik e ekipa 1")
+            return 1
+        elif golovi_ekipa1 < golovi_ekipa2
+            print("Pobenik e ekipa 2")
+            return 1
+        
+if __name__ == '__main__'==
